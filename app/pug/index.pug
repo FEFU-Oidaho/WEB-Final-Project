@@ -1,0 +1,38 @@
+extends template
+
+block variables
+    -var MainTitle = "Военная техника"
+    -var MainText = "Военная техника — технические средства, имеющиеся у вооружённых сил и обеспечивающие их боевые действия и повседневное функционирование. В частности боевая техника, предназначенная для нанесения урона по противнику во время боя. Данный ресурс предоставляет информации об основных типах военной (боевой) техники, стоящей или состоявшей когда либо на вооружении в ВС РФ или СА (РККА)."
+    -var TankText = "Танк — бронированная боевая машина на гусеничном ходу, с пушечным и дополнительным пулемётным вооружением, установленным во вращающейся башне, предназначенным для стрельбы прямой наводкой."
+    -var BmpText = "БМП — класс бронированных боевых машин, основным назначением которых является огневая поддержка, приткрытие и транспортировка личного состава отделения пехоты к месту выполнения боевой задачи."
+    -var ArtText = "Артиллерийское орудие — разновидность огнестрельного и иного ствольного оружия калибром более 20 мм. Как правило, этот тип оружия непригоден для транспортирования силами одного человека на поле боя."
+    -
+        var PlatesItems = [
+            {"src": "img/tank.png", "title": "Танки", "text": TankText},
+            {"src": "img/bmp.png", "title": "БМП", "text": BmpText},
+            {"src": "img/art.png", "title": "Артиллерия", "text": ArtText}
+        ]
+
+mixin create_plates(items)
+    each item in items
+        .home-container-content-palte
+            img(src=item.src)
+            h3= item.title
+            p= item.text
+
+block content
+    article 
+        .main-container
+            .home-container-grid 
+                .home-container-banner 
+                    img(src="img/banner.png")
+                .home-container-plane
+                    .size-container
+                        .home-container-maintext
+                            h1= MainTitle
+                            p= MainText
+
+                .home-container-plane
+                    .size-container
+                        .home-container-plates
+                            +create_plates(PlatesItems)

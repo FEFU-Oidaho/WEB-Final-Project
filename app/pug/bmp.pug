@@ -1,0 +1,34 @@
+extends template
+
+block variables
+    -var DestenyText= "Предназначены для прикрытия пехоты на поле боя, обеспечивая ей надежную огневую поддержку. Спосбны противостоять как технике своего класса, так и танкам на поле боя"
+    -var WeaponsText= "Имеют среднекалиберное вооружение, а также автоматические пушки и пулеметы. Имеют комплексы плачвучести, а также способны содержать в себе весомое кол-во человек вооруженного личного состава"
+    -var ArmorText= "Сирняя степень бронирования, защищающая в основном от пулеметного и стрелкового огня, первичных и вторичных осколочных поражающих элементов и воздействия внешних факторов"
+    -var VideoPath= "vid/bmp.mp4"
+    -
+        var DescriptionItems = [
+            {"title": "Назначение", "text": DestenyText},
+            {"title": "Вооружение", "text": WeaponsText},
+            {"title": "Бронирование", "text": ArmorText}
+        ]
+
+mixin create_plates(items)
+    .veh-container-plates
+        each item in items
+            .veh-container-content-palte
+                h3= item.title 
+                p= item.text
+
+block content 
+    article 
+        .main-container
+            .veh-container-grid
+                .veh-container-banner
+                    img(src="img/bmp.png")
+                .veh-container-plane
+                    .size-container
+                        +create_plates(DescriptionItems)
+                .veh-container-plane
+                    .size-container
+                        .veh-container-video
+                            video(src=VideoPath muted autoplay loop)

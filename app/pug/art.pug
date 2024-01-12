@@ -1,0 +1,34 @@
+extends template
+
+block variables
+    -var DestenyText= "Предназначается для поражения противника с большого расстояния и, приимуществен но, с нанесением удара по большой площади"
+    -var WeaponsText= "В основном подразделяется на ствольную и реактивную базу. Артиллерия всегда представляет из себя мощнозалбовое крупнокалиберное вооружение большой площади поражения"
+    -var ArmorText= "Слабая защищенность. Бронирование артиллерийских систем предназначено исключительно для защиты внутренних модулей машины и экипажа от стрелкового оружия и первичных поражающих осколков"
+    -var VideoPath= "vid/art.mp4"
+    -
+        var DescriptionItems = [
+            {"title": "Назначение", "text": DestenyText},
+            {"title": "Вооружение", "text": WeaponsText},
+            {"title": "Бронирование", "text": ArmorText}
+        ]
+
+mixin create_plates(items)
+    .veh-container-plates
+        each item in items
+            .veh-container-content-palte
+                h3= item.title 
+                p= item.text
+
+block content 
+    article 
+        .main-container
+            .veh-container-grid
+                .veh-container-banner
+                    img(src="img/art.png")
+                .veh-container-plane
+                    .size-container
+                        +create_plates(DescriptionItems)
+                .veh-container-plane
+                    .size-container
+                        .veh-container-video
+                            video(src=VideoPath muted autoplay loop)
