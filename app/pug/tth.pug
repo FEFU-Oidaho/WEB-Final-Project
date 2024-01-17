@@ -1,1 +1,211 @@
 extends template
+
+block variables
+    -
+        var TableItems = [
+            {"grau": "Т-90М", "type": "Танк", "year": "2020", "caliber": "125", "ammo": "40", "speed": "60", "crew": "3", "status": "Да"}, // 1
+            {"grau": "Т-80БВМ", "type": "Танк", "year": "1985", "caliber": "125", "ammo": "38", "speed": "70", "crew": "3", "status": "Да"}, // 2
+            {"grau": "Т-80У", "type": "Танк", "year": "1998", "caliber": "125", "ammo": "45", "speed": "70", "crew": "3", "status": "Да"}, // 3
+            {"grau": "Т-90А", "type": "Танк", "year": "2004", "caliber": "125", "ammo": "43", "speed": "60", "crew": "3", "status": "Да"}, // 4
+            {"grau": "Т-80Б", "type": "Танк", "year": "1985", "caliber": "125", "ammo": "38", "speed": "70", "crew": "3", "status": "Нет"}, // 5
+            {"grau": "Т-72Б", "type": "Танк", "year": "1989", "caliber": "125", "ammo": "45", "speed": "60", "crew": "3", "status": "Да"}, // 6
+            {"grau": "Т-72Б3", "type": "Танк", "year": "2011 ", "caliber": "125", "ammo": "45", "speed": "60", "crew": "3", "status": "Да"}, // 7
+            {"grau": "Т-72А", "type": "Танк", "year": "1974", "caliber": "125", "ammo": "44", "speed": "60", "crew": "3", "status": "Нет"}, // 8
+            {"grau": "Т-64А", "type": "Танк", "year": "1971", "caliber": "125", "ammo": "37", "speed": "61", "crew": "3", "status": "Нет"}, // 9
+            {"grau": "Т-62А", "type": "Танк", "year": "1969", "caliber": "115", "ammo": "40", "speed": "50", "crew": "4", "status": "Нет"}, // 10
+            {"grau": "Об. 435", "type": "Танк", "year": "1961", "caliber": "115", "ammo": "37", "speed": "55", "crew": "4", "status": "Нет"}, // 10
+            {"grau": "Т-55А", "type": "Танк", "year": "1962", "caliber": "100", "ammo": "43", "speed": "50", "crew": "4", "status": "Нет"}, // 11
+            {"grau": "Т-10М", "type": "Танк", "year": "1957", "caliber": "122", "ammo": "30", "speed": "50", "crew": "4", "status": "Нет"}, // 12
+            {"grau": "ИС-4", "type": "Танк", "year": "1947", "caliber": "122", "ammo": "30", "speed": "43", "crew": "4", "status": "Нет"}, // 13
+            {"grau": "Т-54", "type": "Танк", "year": "1947", "caliber": "100", "ammo": "34", "speed": "50", "crew": "4", "status": "Нет"}, // 14
+            {"grau": "ИС-3", "type": "Танк", "year": "1945", "caliber": "122", "ammo": "28", "speed": "40", "crew": "4", "status": "Нет"}, // 15
+            {"grau": "Т-44-100", "type": "Танк", "year": "1944", "caliber": "100", "ammo": "36", "speed": "60", "crew": "4", "status": "Нет"}, // 16
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+            {"grau": "", "type": "", "year": "", "caliber": "", "ammo": "", "speed": "", "crew": "", "status": ""},
+        ]
+
+mixin create_table(items)
+    .tth-content-table
+        table
+            tr.tth-content-table-hat
+                td= "ГРАУ"
+                td= "Тип"
+                td= "Год выпуска"
+                td= "Калибр (мм)"
+                td= "Боекомплект (шт.)"
+                td= "Макс. скорость (км/ч)"
+                td= "Экипаж (чел.)"
+                td= "Состояние на вооружении"
+
+                
+            each item in items
+                tr 
+                    td= item.grau
+                    td= item.type
+                    td= item.year
+                    td= item.caliber
+                    td= item.speed
+                    td= item.ammo
+                    td= item.crew
+                    td= item.status
+
+block content
+    article
+        .main-container
+            .tth-container-grid
+                .tth-container-plane-black
+                    .size-container
+                        +create_table(TableItems)
+
+                .tth-container-plane-white
+                    .size-container
+                            .tth-container-plates
+                                .tth-container-content-plate
+                                    h3= "График"
+                                    .tth-content-controls
+                                        form(method="post" class="tth-container-controls-graph-form")
+                                            p= "Значение по Ox:"
+                                                br
+                                                label(for="Ox_type")= "Тип техники"
+                                                input(id="Ox_type" name="Ox_val" type="radio")
+                                                br
+                                                label(for="Ox_year")= "Год выпуска"
+                                                input(id="Ox_year" name="Ox_val" type="radio")
+                                            
+                                            p= "Значение по Oy:"
+                                                br
+                                                label(for="Oy_speed")= "Скорость"
+                                                input(id="Oy_speed" name="Oy_val" type="checkbox")
+                                                br
+                                                label(for="Oy_caliber")= "Калибр"
+                                                input(id="Oy_caliber" name="Oy_val" type="checkbox")
+                                                br
+                                                label(for="Oy_ammo")= "Боекомплект"
+                                                input(id="Oy_ammo" name="Oy_val" type="checkbox")
+                                                br
+                                            button.tth-content-controls-button= "Построить"
+                                
+                                .tth-container-content-plate
+                                    h3= "Фильтр"
+                                    .tth-content-controls
+                                        form(method="post" class="tth-container-controls-filter-form")
+                                            label(for="grau")= "Грау:"
+                                            input(id="grau" name="grau" type="text") 
+                                            br
+
+                                            label(for="type")= "Тип:"
+                                            input(id="type" name="type" type="text") 
+                                            br
+
+                                            p= "Год:"
+                                                br
+                                                label(for="year_min")= "от "
+                                                input(id="year_min" name="year_val")
+                                                label(for="year_max")= "до "
+                                                input(id="year_max" name="year_val")
+
+                                            p= "Боекомплект:"
+                                                br
+                                                label(for="ammo_min")= "от "
+                                                input(id="ammo_min" name="ammo_val")
+                                                label(for="ammo_max")= "до "
+                                                input(id="ammo_max" name="ammo_val")
+
+                                            p= "Скорость:"
+                                                br
+                                                label(for="speed_min")= "от "
+                                                input(id="speed_min" name="speed_val")
+                                                label(for="speed_max")= "до "
+                                                input(id="speed_max" name="speed_val")
+
+                                            p= "Экипаж:"
+                                                br
+                                                label(for="crew_min")= "от "
+                                                input(id="crew_min" name="creew_val")
+                                                label(for="crew_max")= "до "
+                                                input(id="crew_max" name="creew_val")
+
+                                            p= "Состояние на вооружении:"
+                                                br
+                                                label(for="status_yes")= "Да "
+                                                input(id="status_yes" name="status_val" type="radio")
+                                                label(for="status_no")= "Нет "
+                                                input(id="status_no" name="status_val" type="radio")
+                                            
+                                            button.tth-content-controls-button= "Применить"
+                        
+                                .tth-container-content-plate
+                                    h3= "Сортировка"
+                                    .tth-content-controls
+                                        form(method="post" class="tth-container-controls-sort-form")
+                                            p= "Уровень I:"
+                                                select(id="I_name")
+                                                    option(value="0")= "Нет"
+                                                    option(value="1")= "Год выпуска"
+                                                    option(value="2")= "Калибр"
+                                                    option(value="3")= "Скорость"
+                                                    option(value="4")= "Экипаж"
+                                                    option(value="5")= "Боекомплект"
+                                                label(for="I_reverse")= "По Убыванию?"
+                                                input(id="I_reverse" type="checkbox")
+
+                                            p= "Уровень II:"
+                                                select(id="II_name")
+                                                    option(value="0")= "Нет"
+                                                    option(value="1")= "Год выпуска"
+                                                    option(value="2")= "Калибр"
+                                                    option(value="3")= "Скорость"
+                                                    option(value="4")= "Экипаж"
+                                                    option(value="5")= "Боекомплект"
+                                                label(for="II_reverse")= "По Убыванию?"
+                                                input(id="II_reverse" type="checkbox")
+
+                                            p= "Уровень III:"
+                                                select(id="III_name")
+                                                    option(value="0")= "Нет"
+                                                    option(value="1")= "Год выпуска"
+                                                    option(value="2")= "Калибр"
+                                                    option(value="3")= "Скорость"
+                                                    option(value="4")= "Экипаж"
+                                                    option(value="5")= "Боекомплект"
+                                                label(for="III_reverse")= "По Убыванию?"
+                                                input(id="III_reverse" type="checkbox")
+
+                                            button.tth-content-controls-button= "Сортировать"
+                                    
+                                

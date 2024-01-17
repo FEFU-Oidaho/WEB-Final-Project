@@ -15,7 +15,7 @@ block variables
 mixin create_plates(items)
     .veh-container-plates
         each item in items
-            .veh-container-content-palte
+            .veh-container-content-plate
                 h3= item.title 
                 p= item.text
 
@@ -31,4 +31,4 @@ block content
                 .veh-container-plane
                     .size-container
                         .veh-container-video
-                            video(src=VideoPath muted autoplay loop)
+                            video(src=VideoPath controls muted autoplay loop)

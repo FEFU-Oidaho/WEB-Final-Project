@@ -117,12 +117,12 @@ footer
 
             margin: 1%
 
-// index.html styles -------------------------------------------------------------------------------------
-
 .main-container
     width: 100dvw
     height: 186dvh
 
+
+// index.html styles -------------------------------------------------------------------------------------
 
 .home-container-grid
     display: grid
@@ -173,7 +173,7 @@ footer
 
     height: inherit
 
-    > .home-container-content-palte 
+    > .home-container-content-plate 
         background-color: black
         border-radius: 30px
 
@@ -203,7 +203,7 @@ footer
 
 
 
-    > .home-container-content-palte:hover
+    > .home-container-content-plate:hover
         width: 41%
         height: 71%
 
@@ -240,7 +240,7 @@ footer
 
     height: inherit
 
-    > .veh-container-content-palte 
+    > .veh-container-content-plate 
         background-color: black
         border-radius: 30px
 
@@ -266,7 +266,7 @@ footer
             padding: 2%
 
 
-    > .veh-container-content-palte:hover
+    > .veh-container-content-plate:hover
         width: 41%
         height: 71%
 
@@ -285,5 +285,142 @@ footer
         height: 90%
 
         margin-top: 18px
+    
+    > video::-webkit-media-controls-play-button
+        display: none
+    
+    > video::-webkit-media-controls-timeline-containe
+        display: none
+    > video::-webkit-media-controls-current-time-display
+        display: none
+    > video::-webkit-media-controls-time-remaining-display
+        display: none
+    > video::-webkit-media-controls-timeline
+        display: none
+    > video::-webkit-media-controls-fullscreen-button
+        display: none
+    > video::-webkit-media-controls-timeline-containe
+        display: none
+        
 
 // tth styles -------------------------------------------------------------------------------------
+.tth-container-grid
+    display: grid
+    grid-template-rows: 50% 50%
+
+    width: 100%
+    height: 100%
+
+.tth-container-plane-black
+    background-color: black
+
+.tth-container-plane-white
+    background-color: white
+
+.tth-container-plates
+    display: flex
+    flex-direction: row
+
+    align-items: center
+    justify-content: center
+
+    gap: 5%
+
+    height: inherit
+
+    > .tth-container-content-plate 
+        background-color: black
+        border-radius: 30px
+
+        width: 40%
+        height: 80%
+
+        transition: all 0.3s;
+
+        display: flex
+        flex-direction: column
+
+        align-items: center
+        justify-content: center
+
+        > h3
+            color: white
+            font-size: 100%
+
+            margin: 0px
+
+        > p
+            color: white
+            text-align: center
+            font-size: 80%
+            padding: 2%
+
+.tth-content-table
+    width: 100%
+    height: 100%
+
+    display: flex
+    flex-direction: column
+
+    align-items: center
+    justify-content: center
+
+    & table
+        border: solid thin white
+        border-collapse: collapse
+
+        color: white
+        font-size: 59%
+
+        width: 100%
+
+    & .tth-content-table-hat
+        font-size: 130%
+
+    & tr
+        text-align: center
+
+        width: inherit
+        height: 1%
+
+    & td
+        border: solid thin white
+        vertical-align: middle
+
+
+.tth-content-controls
+    width: 90%
+    height: 85%
+
+.tth-content-controls-button
+    background-color: white
+    border-radius: 40px
+
+    width: 50%
+    height: 7%
+
+    margin-top: 4%
+
+    font-size: 90%
+    font-weight: bold
+
+    cursor: pointer
+    outline: none
+
+.tth-container-controls-graph-form
+    width: 100%
+    height: 100%
+
+    color: white
+
+.tth-container-controls-filter-form
+    width: 100%
+    height: 100%
+
+    color: white
+
+.tth-container-controls-sort-form
+    width: 100%
+    height: 100%
+
+    color: white

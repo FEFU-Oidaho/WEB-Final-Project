@@ -142,7 +142,7 @@ footer {
   gap: 10%;
   height: inherit;
 }
-.home-container-plates > .home-container-content-palte {
+.home-container-plates > .home-container-content-plate {
   background-color: #000;
   border-radius: 30px;
   width: 40%;
@@ -153,20 +153,20 @@ footer {
   align-items: center;
   justify-content: center;
 }
-.home-container-plates > .home-container-content-palte > img {
+.home-container-plates > .home-container-content-plate > img {
   height: 25%;
 }
-.home-container-plates > .home-container-content-palte > h3 {
+.home-container-plates > .home-container-content-plate > h3 {
   color: #fff;
   font-size: 100%;
 }
-.home-container-plates > .home-container-content-palte > p {
+.home-container-plates > .home-container-content-plate > p {
   color: #fff;
   text-align: center;
   font-size: 80%;
   padding: 2%;
 }
-.home-container-plates > .home-container-content-palte:hover {
+.home-container-plates > .home-container-content-plate:hover {
   width: 41%;
   height: 71%;
 }
@@ -196,7 +196,7 @@ footer {
   gap: 10%;
   height: inherit;
 }
-.veh-container-plates > .veh-container-content-palte {
+.veh-container-plates > .veh-container-content-plate {
   background-color: #000;
   border-radius: 30px;
   width: 40%;
@@ -207,17 +207,17 @@ footer {
   align-items: center;
   justify-content: center;
 }
-.veh-container-plates > .veh-container-content-palte > h3 {
+.veh-container-plates > .veh-container-content-plate > h3 {
   color: #fff;
   font-size: 100%;
 }
-.veh-container-plates > .veh-container-content-palte > p {
+.veh-container-plates > .veh-container-content-plate > p {
   color: #fff;
   text-align: center;
   font-size: 80%;
   padding: 2%;
 }
-.veh-container-plates > .veh-container-content-palte:hover {
+.veh-container-plates > .veh-container-content-plate:hover {
   width: 41%;
   height: 71%;
 }
@@ -233,4 +233,124 @@ footer {
   border-radius: 20px;
   height: 90%;
   margin-top: 18px;
+}
+.veh-container-video > video::-webkit-media-controls-play-button {
+  display: none;
+}
+.veh-container-video > video::-webkit-media-controls-timeline-containe {
+  display: none;
+}
+.veh-container-video > video::-webkit-media-controls-current-time-display {
+  display: none;
+}
+.veh-container-video > video::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+.veh-container-video > video::-webkit-media-controls-timeline {
+  display: none;
+}
+.veh-container-video > video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+.veh-container-video > video::-webkit-media-controls-timeline-containe {
+  display: none;
+}
+.tth-container-grid {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+.tth-container-plane-black {
+  background-color: #000;
+}
+.tth-container-plane-white {
+  background-color: #fff;
+}
+.tth-container-plates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  height: inherit;
+}
+.tth-container-plates > .tth-container-content-plate {
+  background-color: #000;
+  border-radius: 30px;
+  width: 40%;
+  height: 80%;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tth-container-plates > .tth-container-content-plate > h3 {
+  color: #fff;
+  font-size: 100%;
+  margin: 0px;
+}
+.tth-container-plates > .tth-container-content-plate > p {
+  color: #fff;
+  text-align: center;
+  font-size: 80%;
+  padding: 2%;
+}
+.tth-content-table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tth-content-table table {
+  border: solid thin #fff;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 59%;
+  width: 100%;
+}
+.tth-content-table .tth-content-table-hat {
+  font-size: 130%;
+}
+.tth-content-table tr {
+  text-align: center;
+  width: inherit;
+  height: 1%;
+}
+.tth-content-table td {
+  border: solid thin #fff;
+  vertical-align: middle;
+}
+.tth-content-controls {
+  width: 90%;
+  height: 85%;
+}
+.tth-content-controls-button {
+  background-color: #fff;
+  border-radius: 40px;
+  width: 50%;
+  height: 7%;
+  margin-top: 4%;
+  font-size: 90%;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+.tth-container-controls-graph-form {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.tth-container-controls-filter-form {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.tth-container-controls-sort-form {
+  width: 100%;
+  height: 100%;
+  color: #fff;
 }
