@@ -5,18 +5,6 @@ global-font(pxels)
         font-size: pixels ps
 
 //template styles -------------------------------------------------------------------------------
-@media screen and (max-width 3840px)
-    html
-        font-size: 34px
-
-@media screen and (max-width 2560px)
-    html
-        font-size: 24px
-
-@media screen and (max-width 1920px)
-    html
-        font-size: 14px
-
 
 .size-container
     width: 85%
@@ -424,3 +412,61 @@ footer
     height: 100%
 
     color: white
+
+
+@media screen and (max-width 1500px)
+    .home-container-plates
+        display: flex
+        flex-direction: column
+
+        align-items: center
+        justify-content: center
+
+        gap: 10%
+
+        height: inherit
+        width: 100%
+
+        > .home-container-content-plate 
+            background-color: black
+            border-radius: 30px
+
+            width: 70%
+            height: 25%
+
+            transition: all 0.3s;
+
+            display: flex
+            flex-direction: row
+
+            align-items: center
+            justify-content: center
+
+            > img
+                width: 40%
+
+            > h3
+                color: white
+                font-size: 100%
+
+            > p
+                color: white
+                text-align: center
+                font-size: 80%
+                padding: 2%
+
+        > .home-container-content-plate:hover
+            width: 71%
+            height: 26%
+
+@media screen and (max-width 3840px)
+    html
+        font-size: 34px
+
+@media screen and (max-width 2560px)
+    html
+        font-size: 24px
+
+@media screen and (max-width 1920px)
+    html
+        font-size: 18px
