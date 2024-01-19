@@ -124,14 +124,6 @@ block content
                                     h3= "Фильтр"
                                     .tth-content-controls
                                         form(method="post" class="tth-container-controls-filter-form")
-                                            label(for="grau")= "Грау:"
-                                            input(id="grau" name="grau" type="text") 
-                                            br
-
-                                            label(for="type")= "Тип:"
-                                            input(id="type" name="type" type="text") 
-                                            br
-
                                             p= "Год:"
                                                 br
                                                 label(for="year_min")= "от "
@@ -159,13 +151,6 @@ block content
                                                 input(id="crew_min" name="creew_val")
                                                 label(for="crew_max")= "до "
                                                 input(id="crew_max" name="creew_val")
-
-                                            p= "Состояние на вооружении:"
-                                                br
-                                                label(for="status_yes")= "Да "
-                                                input(id="status_yes" name="status_val" type="radio")
-                                                label(for="status_no")= "Нет "
-                                                input(id="status_no" name="status_val" type="radio")
                                             
                                             button.tth-content-controls-button= "Применить"
                         

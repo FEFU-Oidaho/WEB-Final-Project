@@ -1,8 +1,8 @@
 //mixins ---------------------------------------------------------------------------------------
 
-global-font(pxels)
-    html
-        font-size: pixels ps
+full-size()
+    width: 100%
+    height: 100%
 
 //template styles -------------------------------------------------------------------------------
 
@@ -201,8 +201,7 @@ footer
     display: grid
     grid-template-rows: 25% 25% 50%
 
-    width: 100%
-    height: 100%
+    full-size()
 
 .veh-container-banner
     background-color: black
@@ -296,8 +295,7 @@ footer
     display: grid
     grid-template-rows: 50% 50%
 
-    width: 100%
-    height: 100%
+    full-size()
 
 .tth-container-plane-black
     background-color: black
